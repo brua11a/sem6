@@ -1,0 +1,1 @@
+Projekt to tymczasowe przedsięwzięcie podejmowane w celu stworzenia unikalnego produktu, usługi lub rezultatu. To, co czyni projekt projektem to **unikalne rezultaty**. DEFINICJA BEDZIE NA EGZAMINIE
