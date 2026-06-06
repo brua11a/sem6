@@ -1,12 +1,13 @@
-Dzisiaj nie ma prezki bo sie cwel nie przygotowal ;p "porozmawiamy sobie"
+## Uczenie pół-nadzorowane
+Czyli część próbek ma etykiety, część nie. Problemem są dane, które niby istnieją, ale są nieotykietowane. Zakładamy, że oetykietowanie wszystkiego jest kosztowne, ale mamy chociaż kilka danych przypisanych do jakiejś klasy.
 
-Z adversarial ML nie bedzie pytań na egzaminie i w sumie nie bedzie nawet z tego wykladu. Na ostatnim wykładzie półtorej godziny powtórki do egzaminu - Q&A. Dzisiaj do 16:00 xdddd
+#### Uczenie aktywne
+Szczególny przypadek uczenia pól-nadzorowanego, opieramy się na ekspercie człowieku, "human in the loop". Taki człowiek jest kosztowny, dlatego chcemy minimalizować wykorzystanie go. 
 
-Osobny obszar uczenia maszyn, na który nie ma nacisku w kursie - obchodzi nas glownie uczenie nadzorowane i pewnie ono glownie bedzie na kolokwium.
+Mamy masę danych nieoznaczonych. Decydujemy które lądują do eksperta, które damy radę sami jakoś oznaczyć. Podobieństwo możemy określić na podstawie chociażby dystansu, ale losowy wybór też całkiem działa. Można też szukać na podstawie dystansu, **ale najbliżej granicy decyzyjnej**. Jako tako działają próbki syntetyczne. Ewentualnie można wytrenowac klasyfiktor na tym, co się ma i tyle. 
 
-Dzisiaj uczenie pół-nadzorowane, część próbek ma etykiety, część nie. Problemem są dane, których zwyczajnie nie ma albo są nieoetykietowane. W sumie to dane są, ale zazwyczaj nie mają etykiet jednak.
-
-Założenie uczenia nadzorowanego jest takie, że na początku przynajmniej trochę danych ma etykiety. Uczenie aktywny - szczególny przypadek, opieramy się na ekspercie człowieku, "human in the loop". Mamy masę danych nieoznaczonych, decydujemy które lądują do eksperta, które damy radę sami jakoś oznaczyć. Podobieństwo możemy określić na podstawie chociażby dystansu. Najgłupszy i całkiem dobra metoda to losowa. Można też szukać na podstawie dystansu, ale najbliżej granicy decyzyjnej. Jako tako działają próbki systetyczne. Ewentualnie można wytrenowac klasyfiaktor na tym, co się ma. 
-
-Najwazniejszy aspekt uczenia polnadzorowanego - na poczatku nie bedzie zandych danych, potem manualnie czesc sie oznaczy, potem moze beda robione mądre wybory.
-
+**Typowy przebieg uczenia półnadzorowanego:**
+1. Na początku bardzo mało etykiet.
+2. Manualnie etykietuje się część danych.
+3. Model zaczyna działać - można robić mądrzejsze wybory.
+4. Iteracyjnie poprawia się model wraz z napływem nowych etykiet.

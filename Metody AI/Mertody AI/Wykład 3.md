@@ -1,10 +1,31 @@
-Dystans Euklidesa
-Dystans Chebysheva/Manhattan
-Dystans Taxicab
-Dystans Minkowskiego - zależy od parametru $p$. Jeśli p=0 to Euklides, jeśli 2 to Manhattan, jeśli dąży do inf to Chebyshev. Można dać p mniejsze od 0 i wtedy figura jest "wklęsła" - miary ułamkowe. 
+#### Metryki odległości
+https://en.wikipedia.org/wiki/Minkowski_distance
+**Euklides** - "w linii prostej", p=2
+**Manhattan/Taxicab** - suma różnic na każdej osi, p=1
+**Chebyshev** - maksimum różnic na osiach, p→∞
 
-Miara a metryka - metryka musi coś spełniać, a miara nie. Miara nie musi spełniać nierówności trójkąta?? To już nie jest metryka odległości ale z tych miar ułamkowych można korzystać. Jeśli ma się zbiory danych wielowymiarowe (dużi cech) to miary ułamkowe są lepsdzym przybliżeniem odległosci między wzorcami?
+![[Pasted image 20260606120749.png]]
+![[Pasted image 20260604000346.png]]
 
+**Minkowskiego** - uogólnienie powyższych, zależy od parametru $p$. Można dać $p$ mniejsze od 1 i wtedy figura jest "wklęsła" - miary ułamkowe. 
+
+![[Pasted image 20260604000411.png]]
+
+Metryka musi spełniać cztery warunki (m.in. nierówność trójkąta). Miara jest luźniejszym pojęciem - nie musi ich wszystkich spełniać.
+ 
+Przy dużej liczbie cech klasyczne metryki tracą sens (curse of dimensionality — wszystkie punkty stają się "jednakowo odległe"). Miary ułamkowe (p<1) lepiej różnicują odległości między wzorcami w takich przestrzeniach.
+
+**Claude wysryw:**
+```
+4 warunki metryki:
+
+Nieujemność — d(x,y) ≥ 0, odległość nie może być ujemna
+Tożsamość — d(x,y) = 0 tylko gdy x = y
+Symetria — d(x,y) = d(y,x), odległość z A do B = odległość z B do A
+Nierówność trójkąta — d(x,z) ≤ d(x,y) + d(y,z), droga przez pośredni punkt nie może być krótsza niż wprost
+
+Miary ułamkowe (p<1) łamią właśnie warunek 4 — stąd nie są metrykami.
+```
 #### Klasyfikatory
 *k-Nearest Neighbours* to klasyfikator leniwy. Liczy się odległosć nowego punktu do całego zestawu treningowego, sprawdza się k najbliższych sąsiadów, patrzy się na ich etykiety, przypisuje się etykietę na tego podstawie. 
 
