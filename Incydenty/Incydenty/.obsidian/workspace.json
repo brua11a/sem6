@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wykład 3/Sprzęt.md",
+                "file": "pytania.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sprzęt"
+              "title": "pytania"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 274.5
   },
   "right": {
     "id": "0b758b7e4845b828",
@@ -183,10 +183,59 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "a8ab0603a14f5ce0",
+  "floating": {
+    "id": "b4452b955cc54bf9",
+    "type": "floating",
+    "children": [
+      {
+        "id": "39d019e69d32fc5d",
+        "type": "window",
+        "children": [
+          {
+            "id": "134c5274b0e61865",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e51532789b5799b5",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "pajewski.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "pajewski"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1410,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "e51532789b5799b5",
   "lastOpenFiles": [
-    "Wykład 3/Infra.md",
+    "pytania.md",
+    "pajewski.pdf",
+    "Pasted image 20260613201909.png",
+    "Pasted image 20260613201609.png",
+    "Pasted image 20260613201408.png",
+    "Pasted image 20260613200439.png",
+    "Pasted image 20260613200349.png",
+    "Pasted image 20260613200154.png",
+    "Pasted image 20260613200036.png",
+    "Pasted image 20260613195649.png",
+    "Pasted image 20260613195112.png",
+    "Pasted image 20260613194918.png",
     "Wykład 3/Sprzęt.md",
+    "Wykład 3/Infra.md",
     "Wykład 2/Pyrzykłady SOC.md",
     "Wykład 3",
     "Wykład 2/Z czego sklada sie SOC.md",

@@ -139,12 +139,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wykład 12.md",
+                "file": "Wykład 5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wykład 12"
+              "title": "Wykład 5"
             }
           }
         ],
@@ -180,7 +180,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "głosow",
+                "query": "nieparame",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,7 +201,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -312,9 +313,10 @@
   },
   "active": "ea8ec3612593c29b",
   "lastOpenFiles": [
-    "Wykład 11.md",
-    "Wykład 12.md",
+    "Wykład 4 - ten ważny.md",
     "Wykład 6 - bazowane na tym od Olgi.md",
+    "Wykład 12.md",
+    "Wykład 11.md",
     "Pasted image 20260606190920.png",
     "Wykład 10.md",
     "Wykład 9.md",
@@ -332,7 +334,6 @@
     "Pasted image 20260606152524.png",
     "Wykład 7 (NIE NA KOLOSA).md",
     "Wykład 3.md",
-    "Wykład 4 - ten ważny.md",
     "Wykład 1.md",
     "Wykład 5.md",
     "Wykład 2.md",
