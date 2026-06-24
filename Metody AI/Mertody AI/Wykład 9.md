@@ -4,8 +4,8 @@ Klasyfikacja danych niezbalansowanych
 
 #### Metryki przy danych niezbalansowanych
 Accuracy, precision i recall to metryki bazowe. Pozostałe są zagregowane
-1. **Balanced accuracy** to średnia arytmetyczna accuracy osobno dla każdej klasy.
-2. **G-mean** to średnia geometryczna accuracy, precision i recall. W zależności od definicji są różne wzory.
+1. **Balanced accuracy** to średnia arytmetyczna recall+specificity osobno dla każdej klasy.
+2. **G-mean** to średnia geometryczna precision i recall. W zależności od definicji są różne wzory.
 3. **F-score** to średnia harmoniczna z precision i recall. 
 
 #### Inny żargon

@@ -7,7 +7,7 @@ Do eksperymentu potrzebne są dane, hipoteza, metodologia/założenia (parametry
 https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall
 
 #### Dokładność (Accuracy) 
-"Na przykład w 70% przypadków mieliśmy rację", czyli procent poprawnych predykcji. Można rozumieć jako sumę przypadków TP (True Positive, poprawnie przewidziano klasę pozytywną) i TN (True Negative, poprawnie przewidziano klasę negatywną) podzieloną przez sumę wszystkich przypadków ($ALL = TP+FP+TN+FN$).
+Dokładność, "na przykład w 70% przypadków mieliśmy rację", czyli procent poprawnych predykcji. Można rozumieć jako sumę przypadków TP (True Positive, poprawnie przewidziano klasę pozytywną) i TN (True Negative, poprawnie przewidziano klasę negatywną) podzieloną przez sumę wszystkich przypadków ($ALL = TP+FP+TN+FN$).
 
 $\text{accuracy} = \frac{TP+TN}{ALL}$
 
@@ -73,24 +73,25 @@ $G_{mean}=\sqrt{\text{Recall}*\text{Specificity}}$
 - $\beta=1$ oznacza, że recall i precision będą równoważne
 - $\beta>1$ oznacza, że recall będzie miał większe znaczenie
 - $\beta<1$ oznacza, ze precision będzie miało większe znaczenie
+
 Silnie krytykowana metryka przez tą dodatkowa wage. Często ludzie liczą $\beta=1$ i elo. Nie zawsze jest to dobre. Dobór $\beta$ powinien zależeć od kontekstu problemu.
 $F_\beta=(1+\beta^2)*\frac{\text{Precision}*\text{Recall}}{\beta^2*\text{Precision}+\text{Recall}}$
 
 ## Benchmark datasets
 Zazwyczaj korzysta się z dostępnych zbiorów benchmarkowych, które są wykrzystywane od lat. Żeby sprawdzić, czy algorytm jest lepszy od innego, nie chcemy tego badać na jednym zbiorze bo to mało miarodajne. Nie koncetrujemy się bardzo na jednym, konkretnym zbiorze danych, tylko na wielu różnych - różne liczby cech, różne typy cech, różne liczby próbek.
 
-W produkcji zazwyczaj już można skupić się na o wiele węższym zakresie, bo interesuje nas konkretny problem.
+Na produkcji zazwyczaj już można skupić się na o wiele węższym zakresie, bo interesuje nas konkretny problem.
 
 #### Dane syntetyczne
-Używa się ich rzadziej. Ciężko w sprawić, by rzeczywiście odzwierciedlały prawdziwe problemy. Przydają się przy danych strumieniowych - napływających w czasie rzeczywistym. Pojawia się tam *dryf koncepcji*, który sprawia sprawia, że cała przestrzeń się przesuwa. Oznacza to, że nawet po nauczeniu się jakiegoś sensownego thresholdu po tygodniu może być chujowo. Stare dane nie muszą odzwierciedlać tych nowych ale o tym wiecej w [[Wykład 12]]. 
+Używa się ich rzadziej. Ciężko sprawić, by rzeczywiście odzwierciedlały prawdziwe problemy. Przydają się przy danych strumieniowych - napływających w czasie rzeczywistym. Pojawia się tam *dryf koncepcji*, który sprawia, że cała przestrzeń się przesuwa. Oznacza to, że nawet po nauczeniu się jakiegoś sensownego thresholdu po tygodniu może być chujowo. Stare dane nie muszą odzwierciedlać tych nowych ale o tym wiecej w [[Wykład 12]]. 
 
 ## Trening
 #### "Sztywny" podział vs k-Fold
-Jako sztywny podział test-trening rozumiemy wzięcie oryginalnego datasetu i jednokrotnym "pokrojeniu" go na dane treningowe i testowe. Model trenuje się na danych treningowych a potem na wytrenowanym modelu wykonuje predykcje, które są walidowane zbiorem testowym. Nie to rozwiązanie rzetelne ani zbalansowane.
+Jako sztywny podział test-trening rozumiemy wzięcie oryginalnego datasetu i jednokrotnym "pokrojeniu" go na dane treningowe i testowe. Model trenuje się na danych treningowych a potem na wytrenowanym modelu wykonuje predykcje, które są walidowane zbiorem testowym. Nie jest to rozwiązanie rzetelne ani zbalansowane.
 
 ![[Pasted image 20260604185607.png]]
 
-O wiele lepszy jest k-Fold Cross-Validation. Zbiór jest dzielony na $k$ równych *foldów*, model jest trenowany $k$ razy, za każdym razem innym inny fold jest testem, reszta treningowym. Problemem jest tylko to, że cała klasa może zamknąć się w jednym foldzie. Rozwiązanie to **Stratified** k-Fold Cross Validation, gdzie podział klas w foldach odpowiada temu w oryginalnych zestawach danych. Używać zawsze.
+O wiele lepszy jest k-Fold Cross-Validation. Zbiór jest dzielony na $k$ równych *foldów*, model jest trenowany $k$ razy, za każdym razem inny fold jest testem, reszta treningowym. Problemem jest tylko to, że cała klasa może zamknąć się w jednym foldzie. Rozwiązanie to **Stratified** k-Fold Cross Validation, gdzie podział klas w foldach odpowiada temu w oryginalnych zestawach danych. **Repeated** Stratified k-Fold Cross Validation używać zawsze.
 
 ![[Pasted image 20260604185453.png]]
 ![[Pasted image 20260604185518.png]]
@@ -100,7 +101,7 @@ Specjalna walidacja krzyżowa używana dla małych zbiorów danych. Występuje, 
 
 ![[Pasted image 20260604190326.png]]
 
-Nie da się policzyć ani średniej, ani odchylenia ani nic - na końcu jest tylko jeden wynik. Używa się tylko gdy zestawy danych są mega małe - 20, 50 próbek. Normalne metody dadzą wtedy gówniane wyniki. "Bierzemy tyle ile się da do treningu i liczymy na to ze klasyfikator nauczy się czegokolwiek".
+Nie da się policzyć ani średniej, ani odchylenia ani nic - na końcu jest tylko jeden wynik na fold. Używa się tylko gdy zestawy danych są mega małe - 20, 50 próbek. Normalne metody dadzą wtedy gówniane wyniki. "Bierzemy tyle ile się da do treningu i liczymy na to ze klasyfikator nauczy się czegokolwiek".
 
 Liczbę k-Foldów wybiera się na podstawie rozmiaru zbioru danych. Im większy zbiór tym mniejsze k wystarczy. 
 *The choice of K affects the trade-off between bias and variance:*

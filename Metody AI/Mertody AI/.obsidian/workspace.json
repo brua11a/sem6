@@ -139,16 +139,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wykład 5.md",
+                "file": "Wykład 9.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wykład 5"
+              "title": "Wykład 9"
+            }
+          },
+          {
+            "id": "2fa7eb98d2c14de6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wykład 9.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Wykład 9"
+            }
+          },
+          {
+            "id": "d43d06b2cbff7e0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wykład 9.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Wykład 9"
+            }
+          },
+          {
+            "id": "4fb081b5730dd551",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wykład 3.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Wykład 3"
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -180,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nieparame",
+                "query": "klasyfikator",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,8 +243,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -311,32 +352,32 @@
       "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "ea8ec3612593c29b",
+  "active": "4fb081b5730dd551",
   "lastOpenFiles": [
-    "Wykład 4 - ten ważny.md",
-    "Wykład 6 - bazowane na tym od Olgi.md",
-    "Wykład 12.md",
-    "Wykład 11.md",
-    "Pasted image 20260606190920.png",
-    "Wykład 10.md",
     "Wykład 9.md",
-    "Wykład 8 (NIE NA KOLOSA).md",
-    "INFO.md",
-    "Bez nazwy.md",
-    "Pasted image 20260606171453.png",
-    "Pasted image 20260606164400.png",
-    "Pasted image 20260606164356.png",
-    "Pasted image 20260606164351.png",
-    "Pasted image 20260606164346.png",
+    "Wykład 5.md",
+    "Wykład 4 - ten ważny.md",
     "Pasted image 20260606162208.png",
+    "Wykład 10.md",
     "Pasted image 20260606162148.png",
     "Pasted image 20260606162131.png",
-    "Pasted image 20260606152524.png",
-    "Wykład 7 (NIE NA KOLOSA).md",
+    "Wykład 11.md",
     "Wykład 3.md",
-    "Wykład 1.md",
-    "Wykład 5.md",
+    "Wykład 12.md",
+    "Wykład 8 (NIE NA KOLOSA).md",
+    "Wykład 7 (NIE NA KOLOSA).md",
+    "Wykład 6 - bazowane na tym od Olgi.md",
     "Wykład 2.md",
+    "Pasted image 20260621222202.png",
+    "Pasted image 20260621222130.png",
+    "Pasted image 20260621220658.png",
+    "Pasted image 20260621220546.png",
+    "Pasted image 20260621220518.png",
+    "Pasted image 20260621215938.png",
+    "Pasted image 20260606190920.png",
+    "INFO.md",
+    "Bez nazwy.md",
+    "Wykład 1.md",
     "1-s2.0-S1568494621001423-main.pdf"
   ]
 }

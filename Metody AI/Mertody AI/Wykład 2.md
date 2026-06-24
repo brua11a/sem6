@@ -1,3 +1,4 @@
+https://towardsdatascience.com/all-about-categorical-variable-encoding-305f3361fd02/
 #### Przetwarzanie różnych modalności w ML
 Tabele są trudniejsze od zdjęć do przetworzenia dla algorytmów ML. W sumie to obrazy są jedną z prostszych form informacji. Są to dyskretne sygnały cyfrowe (właściwie siatka wartości). Format jest spójny. Można założyć, że zdjęcie jest macierzą (tensorem), gdzie każdy punkt mieści się w zakresie 0-255 uint_8.
 
@@ -6,7 +7,10 @@ Tabele mają w sobie różnorodne typy danych - są heterogeniczne, za to obrazy
 #### Podejścia oparte na encode'owaniu/transformacji danych
 Jest kilka sposobów na przetworzenie danych tabularycznych. Są podejścia jednowymiarowe i wielowymiarowe.
 
-Dla jasności, kategoria != etykieta. Kategoria to możliwa wartość cechy wejściowej, czyli zawartość kolumny w tabeli. Etykieta to klasa przypisana samplowi.
+Dla jasności, kategoria != etykieta. Kategoria to możliwa wartość cechy wejściowej, czyli zawartość kolumny w tabeli. Etykieta to klasa przypisana samplowi. 
+
+Claude wysryw:
+![[Pasted image 20260621220546.png]]
 
 **Podejścia wielowymiarowe**
 Są związane z uczeniem głębokim, ale to nie dotyczy kursu. Polega na tym, że dla danych tabelarycznych z każdego wzorca robi się obraz a potem używa się sieci głębokich. W praktyce każdy wiersz zamienia się w obraz xd
@@ -16,14 +20,20 @@ Są związane z uczeniem głębokim, ale to nie dotyczy kursu. Polega na tym, ż
    >Każda kategoria zmienia się w integer. To można robić zawsze, "tego zepsuć się nie da". Wyjątek gdy dane są niezbalansowane - klasa mniejszościowa musi mieć etykietę 1. Label encoding wprowadza uporządkowanie do kategorii, a one nie zawsze powinny być uporządkowane. "Problem jest jak ktoś zamieni np. Indie, USA na liczby 0, 33 przez co model może uznac ze USA jest lepsze od Indii bo jest wyższa liczba"
 2. **One-hot encoding**
    >Dla każdej kategorii dopisywana jest dodatkowa cecha, czyli jeśli jest 16 możliwych kategorii/etykiet, to powstanie 16 nowych kolumn *binarnych dopasowań*, gdzie większość będzie pusta. Z shape np. (48842, 1) zrobi się (48842, 16) jeśli jest 16 klas. Wtedy nie ma problemu uporządkowania z wcześniej. Tradeoff jest taki, ze pojawia się dużo cech - złożoność obliczeniowa zależy od ilości cech. Z tą metodą robi się problem jak tym zencode'uje się wszystko. Jeśli cech jest więcej niż próbek to generalizacja jest bardzo trudna.
-
-![[Pasted image 20260604100320.png]]
+   >
+   >![[Pasted image 20260604100320.png]]
 
 3. **Binary encoding**
    >Podobne ale mniej kolumn, nie tworzy się nowej kolumny dla każdej cechy. Zamiast tego "łączy" się bity w bitmapach. Czyli 16 kategorii  i 16 kolumn z one-hot można zamienić na 4, bo liczba 16 mieści się to w 4 bitach.
-4. **Target encoding**
-   >Kategoria jest zastępywana średnią wartością etykiety dla tej kategorii
-5. **Hash-based encoding**
+   >
+   >![[Pasted image 20260621222202.png]]
+3. **Target encoding**
+   >Zamiast zamieniać kategorię na arbitralną liczbę (jak w label encoding) albo tworzyć nowe kolumny (jak w one-hot), zastępujesz każdą kategorię średnią wartości docelowej (y) dla tej kategorii. Liczba niesie realną informację statystyczną - nie jest arbitralna jak w label encoding.
+   >
+   >Czyli po target encodingu kolumna `Category` znika i zostaje tylko `Target Encoded Value` — model zamiast nieczytelnego `"B"` dostaje liczbę `0.5` która mówi mu: _„ta kategoria historycznie wiązała się z oszustwem w 50% przypadków"_.
+   >
+   >![[Pasted image 20260621215938.png]]
+4. **Hash-based encoding**
    >Kategoria hashowana do wektora o stałym rozmiarze.
 
 #### Imputacja
@@ -35,7 +45,8 @@ Nie ma klasyfikatora, metody w ML, która jest "najlepsza" - na każde pytanie o
 1. Normalizację standardową cech (po kolei kolumny)
    >Każdą $x :=$ wartość w kolumnie przekształca się jako $z = \frac{(x-\text{avg})}{\text{std}}$. Średnia kolumny wtedy zawsze będzie w 0, a odchylenie od tego będzie liczbą ujemną lub dodatnią. Po co? Żeby cechy o różnych skalach (np. wiek 0–100 i zarobki 0–100000) nie dominowały jedne nad drugimi w modelu. Po standaryzacji wszystkie kolumny są "na tej samej skali".
 2. Normalizacja przedziałowa
-   >Nieważne co wszystkie wartości ogranicza się, skaluje do przedziału.
+   >Nieważne co wszystkie wartości ogranicza się, skaluje do przedziału poprzez działanie:
+   >$x'=\frac{x-x_{\min}}{x_{\max}-x_{\min}}$. Wartości będą się mieściły w \[0; 1\].
 3. Normalizacja L2
    >Wykonywana jest po wierszach, używana w metodach odległosciowych. Pierwiastek kwadratowy z sumy kwadratów wszystkich wartości w danym wierszu.
 
@@ -50,3 +61,8 @@ Do ekstrakcji najczęściej służy PCA. Podaje się liczbę komponentów (nowyc
 
 #### Miary trudności problemów
 Jest 6-7 kategorii. Część zależy od cech, część od sąsiedztwa... Można wtedy policzyć 20 miar i zobaczyć jak trudny jest zbiór pod konkretnym względem.
+
+Claude wysryw:
+```
+Miary trudności (złożoności) problemów klasyfikacji to zestaw ok. 20 wskaźników podzielonych na ~6 kategorii (m.in. oparte na cechach, na sąsiedztwie, na liniowości, wymiarowości i niezbalansowaniu klas), które opisują geometrię i strukturę zbioru danych. Liczysz cały ten wektor miar, żeby zobaczyć, pod jakim konkretnym względem dany zbiór jest trudny - bo żadna pojedyncza liczba nie oddaje trudności całościowo.
+```

@@ -18,7 +18,7 @@ K-means to najprostszy algorytm klasteryzacji, grupowania. Polega po prostu na d
 ![[Pasted image 20260606164356.png]]
 ![[Pasted image 20260606164400.png]]
 
-Klasyfikacja wieloetykietowa oznacza, że jeden obiekt będzie miał kilka etykiet. Pojawia się cos podobnego w uczeniu nienadzorowanych, **Fuzzy c-Means**. "Klaster jest średnią instancji, ale jest poważone po przynależności"
+Klasyfikacja wieloetykietowa oznacza, że jeden obiekt będzie miał kilka etykiet. Pojawia się cos podobnego w uczeniu nienadzorowanym, **Fuzzy c-Means**. "Klaster jest średnią instancji, ale jest poważone po przynależności"
 
 ![[Pasted image 20260606171453.png]]
 

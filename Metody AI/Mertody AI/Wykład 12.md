@@ -19,7 +19,7 @@ Niezbalansowanie w strumieniu:
 
 Na danych strumieniowych, ponownie, nie da się startyfikacji k-foldowej. Robi sie zamist tego **TestThenTrain**. Pierwszy chunk służy do trenowania, każdy kolejny jest najpierw predyktowany (test), potem służy do treningu.
 
-Żeby wyliczyć metrykę, potrzebna jest predykcja i rzeczywista etykieta - problem jest taki, że w strumieniu dane mogą być nieoetykietowane lub mogą przychodzić z opóźnieniem. Moze być przydatny human in the loop i nie ma to sensu. Jak często jednak jest ten człowiek potrzebny? Czy musi cały czas siedzieć i etykietować? Poprzez metody statystyczne można np. wykryć ze coś jest nie tak i wtedy "dotrenować".
+Żeby wyliczyć metrykę, potrzebna jest predykcja i rzeczywista etykieta - problem jest taki, że w strumieniu dane mogą być nieoetykietowane lub mogą przychodzić z opóźnieniem. Może być przydatny human in the loop, ale takie rozwiązanie nie ma to sensu. Jak często jednak jest ten człowiek potrzebny? Czy musi cały czas siedzieć i etykietować? Poprzez metody statystyczne można np. wykryć ze coś jest nie tak i wtedy "dotrenować".
 
 **Prequential** to wariant TestThenTrain, w którym zachowujemy część kontekstu z poprzedniego data stream. Wadą jest czas przetwarzania, dużo wolniejszy. Zaletą jest większa czułość, zależy od rozmiaru okna.
 
@@ -31,5 +31,5 @@ Zdecydowana większość metod strumieniowych to metody zespołowe ([[Wykład 6 
 2. Testuje się klasyfikatorem 1, trenuje się klasyfikator 2
 3. Testuje się wszystkimi klasyfikatorami przez głosowanie/fuzję, trenuje się klasyfikator 3.
 
-Inny pomysl - gorna granica liczby klasyfikatorow. Gdy dotrzeby do granicy, najslabszy/najstarszy się usuwa. Dzięki baggingowi można na spokojnie usuwać te klasyfikatory, żaden z nich nie jest krytyczny.
+Inny pomysl - gorna granica liczby klasyfikatorow. Gdy dotrzemy do granicy, najslabszy/najstarszy się usuwa. Dzięki baggingowi można na spokojnie usuwać te klasyfikatory, żaden z nich nie jest krytyczny.
 

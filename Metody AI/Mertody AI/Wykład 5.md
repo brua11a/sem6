@@ -3,7 +3,7 @@ Polecany po raz kolejny jest artykuł *How to design the fair experimental class
 ## Testy normalności rozkładu
 Sprawdza, czy rozkład jest normalny. Testy parametryczne obchodzi to, jaki jest rozkład - najlepiej jeśli jest on normalny. Testów normalności jest masa, sprawdza się najczęściej Shapiro-Wilk, rzadziej Kolmogorov-Smirnov. Jeśli testu nie obchodzi rozkład, to mówi się o testach nieparametrycznych.
 
-**UWAGA: dla kasyfikatorów, gdzie jest wiele zbiorów i wiele klasyfikatorów używa się wilcoxona signed.**
+**UWAGA: dla klasyfikatorów, gdzie jest wiele zbiorów i wiele klasyfikatorów używa się wilcoxona signed.**
 ## Powszechnie używane testy
 #### Dwa klasyfikatory na jednym zbiorze:
 - **(Corrected) Student's T-test** - parametryczny

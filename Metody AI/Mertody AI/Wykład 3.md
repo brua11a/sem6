@@ -11,9 +11,9 @@ https://en.wikipedia.org/wiki/Minkowski_distance
 
 ![[Pasted image 20260604000411.png]]
 
-Metryka musi spełniać cztery warunki (m.in. nierówność trójkąta). Miara jest luźniejszym pojęciem - nie musi ich wszystkich spełniać.
+Metryka (W TYM KONTEKSCIE!!!) musi spełniać cztery warunki (m.in. nierówność trójkąta). Miara jest luźniejszym pojęciem - nie musi ich wszystkich spełniać.
  
-Przy dużej liczbie cech klasyczne metryki tracą sens (curse of dimensionality — wszystkie punkty stają się "jednakowo odległe"). Miary ułamkowe (p<1) lepiej różnicują odległości między wzorcami w takich przestrzeniach.
+Przy dużej liczbie cech klasyczne metryki tracą sens (curse of dimensionality - wszystkie punkty stają się "jednakowo odległe"). Miary ułamkowe (p<1) lepiej różnicują odległości między wzorcami w takich przestrzeniach.
 
 **Claude wysryw:**
 ```
