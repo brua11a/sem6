@@ -15,6 +15,8 @@ Metryka (W TYM KONTEKSCIE!!!) musi spełniać cztery warunki (m.in. nierównoś�
  
 Przy dużej liczbie cech klasyczne metryki tracą sens (curse of dimensionality - wszystkie punkty stają się "jednakowo odległe"). Miary ułamkowe (p<1) lepiej różnicują odległości między wzorcami w takich przestrzeniach.
 
+Intuicja jest taka, że $p<1$ uwypukla różnice między cechami, a $p>1$ uwypukla róznicę w obrębie tej samej cechy. Dla $p==1$ różnica między cechami i w obrębie tej samej cechy jest taka sama, nic nie ma znaczenia.
+
 **Claude wysryw:**
 ```
 4 warunki metryki:

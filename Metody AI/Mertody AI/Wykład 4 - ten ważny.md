@@ -83,7 +83,7 @@ Zazwyczaj korzysta się z dostępnych zbiorów benchmarkowych, które są wykrzy
 Na produkcji zazwyczaj już można skupić się na o wiele węższym zakresie, bo interesuje nas konkretny problem.
 
 #### Dane syntetyczne
-Używa się ich rzadziej. Ciężko sprawić, by rzeczywiście odzwierciedlały prawdziwe problemy. Przydają się przy danych strumieniowych - napływających w czasie rzeczywistym. Pojawia się tam *dryf koncepcji*, który sprawia, że cała przestrzeń się przesuwa. Oznacza to, że nawet po nauczeniu się jakiegoś sensownego thresholdu po tygodniu może być chujowo. Stare dane nie muszą odzwierciedlać tych nowych ale o tym wiecej w [[Wykład 12]]. 
+Używa się ich rzadziej. Ciężko sprawić, by rzeczywiście odzwierciedlały prawdziwe problemy. Przydają się przy danych strumieniowych - napływających w czasie rzeczywistym. Pojawia się tam *dryf koncepcji*, który sprawia, że cała przestrzeń się przesuwa. Oznacza to, że nawet po nauczeniu się jakiegoś sensownego thresholdu po tygodniu może być źle. Stare dane nie muszą odzwierciedlać tych nowych ale o tym wiecej w [[Wykład 12]]. 
 
 ## Trening
 #### "Sztywny" podział vs k-Fold

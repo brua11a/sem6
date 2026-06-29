@@ -17,7 +17,7 @@ Dane multimodalne - różnych typów, np. video i głos. Obraz, tekst, dźwięk,
 
 Fuzja może tu polegać na zespołach z głosowaniem. Może też polegać na konkatenacji przestrzeni do jednej i wykorzystaniu jednego klasyfikatora. "Dane multimodalne są wtedy, jak dane pochodzą z różnych sensorów i nie da się ich złączyć do jednej reprezentacji bez wykonania ekstrakcji". Przed konkatenacją trzeba znormalizować wartości, bo te o mniejszym rzędzie "zginą".
 
-Fuzja Mid, Early i Późna - doczytaj w domu bo chuj wie, podobno nie ma konsensusu.
+Fuzja Mid, Early i Późna - doczytaj w domu bo idk, podobno nie ma konsensusu.
 
 Problemy w kwestii multimodalności
 - wysoka wymiarowość i konflikt danych, a także złożoność obliczeniowa

@@ -7,7 +7,7 @@ Sprawdza, czy rozkład jest normalny. Testy parametryczne obchodzi to, jaki jest
 ## Powszechnie używane testy
 #### Dwa klasyfikatory na jednym zbiorze:
 - **(Corrected) Student's T-test** - parametryczny
-- **5x2 / Mann-Whitney** - nieparametryczny
+- **Mann-Whitney** - nieparametryczny
 
 #### Dwa klasyfikatory na wielu zbiorach:
 - **Wilcoxon signed-rank test** 
@@ -44,9 +44,11 @@ Dla klasyfikatorów ML prawie zawsze używa się nieparametrycznych — wyniki r
 
 Zazwyczaj testy, nadzorowanie badania są zależne, czyli wykonuje się testy paired. Wyniki klasyfikatorów mogę być różne ale działające na tych samych wzorcach. 
 
-$\alpha$ to pewna tolerancja błędu, alfa na 5% oznacza, że wynik będzie na 95% prawdziwy. Właściwie, akceptujemy 5% na szpont (*odrzucenie hipotezy zerowej gdy ta jest prawdziwa*). 5% to standard.
+$\alpha$ to pewna tolerancja błędu, alfa na 5% oznacza, że wynik będzie na 95% prawdziwy. Właściwie, akceptujemy 5% na *odrzucenie hipotezy zerowej gdy ta jest prawdziwa*. 5% to standard.
 
-Na potrzeby porównywania klasyfikatorów, wykorzystuje się średnie dla konkretnich datasetów wyliczone poprzez uśrednienie wyników foldów - znane z labów. Czasem pojawiają się rankingi. Metody rankingowe sprawdzają, na którym "miejscu" jest dany klasyfikator - znane z biometrii. Pozwala to unikać sytuacji, w której jeden z klasyfikatorów ma świetny średni wynik bo raz wyszedł wyśmienicie a zazwyczaj chujowo.
+Liczy się $p$ z założeniem, że $H_0$ jest prawdziwa. Jeśli $p<\alpha$, to zakładamy, że mamy za mało dowodów na to, by trzymać się $H_0$. Odrzuca się ją wtedy, a na jej miejsce wskakuje hipoteza alternatywna, $H_1$. Jeśli $p>\alpha$, to oznacza, że hipoteza zerowa jest wystarczająco prawdopodobna, by jej nie odrzucać, czyli wtedy zostaje się z $H_0$.
+
+Na potrzeby porównywania klasyfikatorów, wykorzystuje się średnie dla konkretnich datasetów wyliczone poprzez uśrednienie wyników foldów - znane z labów. Czasem pojawiają się rankingi. Metody rankingowe sprawdzają, na którym "miejscu" jest dany klasyfikator - znane z biometrii. Pozwala to unikać sytuacji, w której jeden z klasyfikatorów ma świetny średni wynik bo raz wyszedł wyśmienicie a zazwyczaj kiepsko.
 
 #### Wiele zbiorów, wiele klasyfikatorów
 Wykorzystuj Friedmann, z 20 metod i z 30 datasetów. Przedstawia się różnice w postaci diagramu wartości krytycznych, gdzie są przedstawiane średnie rangi. Jeżeli rankingi dwóch metod mieszczą się w różnicy krytycznej, to różnica między nimi nie jest statystycznie znacząca. 

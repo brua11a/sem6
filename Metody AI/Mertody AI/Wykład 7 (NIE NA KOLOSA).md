@@ -73,5 +73,5 @@ Konwolucja to zagnieżdżona pętla z macierzą przechodzącą po obrazie i wyko
 
 ![[Pasted image 20260606152044.png]]
 
-Sieć neuronowa to sieć sztucznych neuronow (szoker). Sztuczny neuron to klocek liczący regresję liniową, under the hood logistyczną, nic więcej. inżycwela od 9 lat. W praktyce, sieć neuronowa ma diminishing return dla wiecej niz 3 warstw. Najważniejszym elementem sieci jest ekstrakcja cech - połączony specyfikacją. Sieć nie operuje na cechach, które człowiek rozumie, troche black box. Rozrózniamy deep learning po tym, że i guess mniej cech jest rozumialnych i mniej robi czlowiek. Wartości zbioru danych beda inne w kazdej epoce + duzo warstw neuronow wymagane przez architekture. 
+Sieć neuronowa to sieć sztucznych neuronow (szoker). Sztuczny neuron to klocek liczący regresję liniową, under the hood logistyczną, nic więcej. W praktyce, sieć neuronowa ma diminishing return dla wiecej niz 3 warstw. Najważniejszym elementem sieci jest ekstrakcja cech - połączony specyfikacją. Sieć nie operuje na cechach, które człowiek rozumie, troche black box. Rozrózniamy deep learning po tym, że i guess mniej cech jest rozumialnych i mniej robi czlowiek. Wartości zbioru danych beda inne w kazdej epoce + duzo warstw neuronow wymagane przez architekture. 
 

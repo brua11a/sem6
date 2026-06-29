@@ -13,9 +13,9 @@ Klątwa wymairowości - nadmiar cech, kolumn pogarsza generalizację jakości. C
 Inputacja - kiedy mamy braki danych. Podejście jedno i wielo?? Średnia, mediana, moda? Jedno od wielowymiarowej rozni sie tym ze bierze sie pod uwage wiecej cech.
 Normalizacja standardowa, przedziałowa, L2
 Selekcja - podzbior cech. Ekstrakcja - na podsatwie satrych cech liczy sie nowa. PCA - skrot od ????
-W systemie medycznym powinno się opierać na ??? bo ???? w sumie chuj wie na czym zalezy
+W systemie medycznym powinno się opierać na ??? bo ???? w sumie niewiadomo na czym zalezy
 Czym sie rozni selekcja filtrowa od wrapperowej??
-Miary teudnośći problemu - do czego sluza? Chuj wie w tym kontekscie a nie powie 
+Miary teudnośći problemu - do czego sluza? nie wiadomo, w tym kontekscie a nie powie 
 Metryki i miary dystansu - euklides, manhattan, minkowski... Metryka musi spełniać warunki, m.in. nierówność trójkata. Moze byc mniejsza od 1 ale nie od zera. 
 Self learning - uzywa sie tam klasteryzacji do samo-uczenia i tworzenia "etykiet".
 KNN to klasyfikator leniwy bo zapamiętuje tylko parametry, zapamiętuje tylko zbior treningowy. Liczy się odległosć nowego punktu do całego zestawu treningowego, sprawdza się k najbliższych sąsiadów, patrzy się na ich etykiety, przypisuje się etykietę na tego podstawie. Co można poważyć? dystans, częstość występowania, mozna losowac....
